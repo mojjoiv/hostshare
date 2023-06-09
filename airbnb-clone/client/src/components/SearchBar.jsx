@@ -24,62 +24,70 @@ const SearchBar = () => {
 
   return (
     <>
-
-{/* <div className="relative">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="absolute top-0 bottom-0 w-6 h-6 my-auto text-gray-400 left-3"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                >
-                    <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                    />
-                </svg>
-                <input
-                    type="text"
-                    placeholder="Search"
-                    className="w-full py-3 pl-12 pr-4 text-gray-500 border rounded-md outline-none bg-gray-50 focus:bg-white focus:border-indigo-600"
-                />
-            </div> */}
-
-
-      <div className="flex w-3/5 md:w-1/2 bg-gray-300 border border-gray-400 rounded-full overflow-hidden shadow-sm hover:shadow-lg">
-        <div className="grow">
-          <input
-            type="search"
-            placeholder="Where you want to go?"
-            className="w-full py-2 px-4 border-none focus:outline-none  text-sm md:text-lg"
-            onChange={(e) => handleSearch(e)}
-            value={searchText}
-          />
-        </div>
+      <div className="flex w-3/5 md:w-1/2 border border-none rounded-full overflow-hidden shadow-sm hover:shadow-lg">
+      {/* <div className="flex-1 grow">
+        <input
+          type="text"
+          className="w-full bg-white border border-gray-300 rounded-l-lg px-4 py-2 focus:outline-none"
+          placeholder="Location"
+          onChange={(e) => handleSearch(e)}
+          value={searchText}
+        />
+      </div>
+      <div className="flex-1">
+        <input
+          type="text"
+          className="w-full bg-white border border-gray-300 rounded-none px-4 py-2 focus:outline-none"
+          placeholder="Check-in"
+        />
+      </div> 
         <div className="flex  bg-blue text-white cursor-pointer">
-          <button
-            className="flex py-2 px-4 md:p-2 bg-primary rounded-r-full"
-            onClick={handleSearch}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={3}
-              stroke="currentColor"
-              className="w-4 h-4 mt-1"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-              />
-            </svg>
-            <span className="hidden md:block ml-1">Search</span>
-          </button>
-        </div>
+        <button className="bg-red-500 text-white font-bold py-2 px-4 rounded-full"
+                onClick={handleSearch}>
+               <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    fill="none" viewBox="0 0 24 24" 
+                    stroke-width="1.5" 
+                    stroke="currentColor" 
+                    class="w-6 h-6">
+                   <path stroke-linecap="round" 
+                   stroke-linejoin="round" 
+                   d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+              </svg>
+      </button>
+        </div> */}
+         <div className="relative flex-1">
+      <input
+        type="text"
+        className="w-full bg-transparent pl-10 py-2 focus:outline-none border-none text-center"
+        placeholder="Try Miami"
+        onChange={(e) => handleSearch(e)}
+        value={searchText}
+      />
+    </div>
+    <div className="flex items-center h-6 w-px bg-gray-300 mx-4 "></div>
+    <div className="flex-1">
+      <input
+        type="text"
+        className="w-full bg-transparent py-2 focus:outline-none border-none text-center"
+        placeholder="Add dates"
+      />
+    </div>
+    <div className="flex items-center h-6 w-px bg-gray-300 mx-4"></div>
+    <div className="flex-1">
+      <input
+        type="text"
+        className="w-full bg-transparent py-2 focus:outline-none border-none text-center"
+        placeholder="Add guests"
+      />
+    </div>
+
+      <button className="bg-red-500 text-white font-bold py-2 px-4 rounded-full" 
+              onClick={handleSearch}>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+</svg>
+      </button>
       </div>
     </>
   );

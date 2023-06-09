@@ -60,6 +60,7 @@ export const Header = () => {
         {user && <div>{user.name}</div>}
       </Link>
     </header>
+    <br/>
       <Swiper/>
     </>
   );

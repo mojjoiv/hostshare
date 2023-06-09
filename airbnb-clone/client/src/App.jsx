@@ -49,7 +49,7 @@ function App() {
         {/* <Footer/> */}
         <ToastContainer autoClose={2000} transition={Slide} />
       </PlaceProvider>
-      {/* <Footer/> */}
+      <Footer/>
     </UserProvider>
     
   );

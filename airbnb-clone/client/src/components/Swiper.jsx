@@ -1,54 +1,254 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Swiper from 'swiper';
 
-const Swiper = () => {
-    return ( 
-        <>
-         <div id="controls-carousel" className="relative w-full h-12 grid grid-cols-2 gap-6" data-carousel="static">
-    
-    <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
-         
-        <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="https://a0.muscache.com/pictures/aaa02c2d-9f0d-4c41-878a-68c12ec6c6bd.jpg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 text-black" alt="..."/>
+const SwiperCarousel = () => {
+  useEffect(() => {
+    let swiper = null;
+
+    const initializeSwiper = () => {
+      swiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 2,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        speed: 0,
+      });
+    };
+
+    initializeSwiper();
+
+    return () => {
+      if (swiper) {
+        swiper.destroy();
+      }
+    };
+  }, []);
+
+  return (
+    <div className="swiper-container bg-white py-4 px-6  rounded-lg max-w-full mx-auto h-16">
+      <div className="swiper-wrapper flex">
+        <div className="swiper-slide p-4 flex items-center">
+          <div className="slide-content">
+            <img
+              src="https://a0.muscache.com/pictures/3b1eb541-46d9-4bef-abc4-c37d77e3c21b.jpg"
+              alt="Slide 1"
+              className="w-1/4 h-auto"
+            />
+          </div>
         </div>
-      
-        <div className="hidden duration-700 ease-in-out" data-carousel-item="active">
-            <img src="https://a0.muscache.com/pictures/aaa02c2d-9f0d-4c41-878a-68c12ec6c6bd.jpg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+        <div className="swiper-slide p-2 flex items-center">
+          <div className="slide-content">
+            <img
+              src="https://a0.muscache.com/pictures/248f85bf-e35e-4dc3-a9a1-e1dbff9a3db4.jpg"
+              alt="Slide 2"
+              className="w-1/4 h-auto"
+            />
+          </div>
         </div>
-      
-        <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="https://a0.muscache.com/pictures/aaa02c2d-9f0d-4c41-878a-68c12ec6c6bd.jpg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+        <div className="swiper-slide p-2 flex items-center">
+          <div className="slide-content">
+            <img
+              src="https://a0.muscache.com/pictures/aaa02c2d-9f0d-4c41-878a-68c12ec6c6bd.jpg"
+              alt="Slide 2"
+              className="w-1/4 h-auto"
+            />
+          </div>
+        </div>
+        <div className="swiper-slide p-2 flex items-center">
+          <div className="slide-content">
+            <img
+              src="https://a0.muscache.com/pictures/957f8022-dfd7-426c-99fd-77ed792f6d7a.jpg"
+              alt="Slide 2"
+              className="w-1/4 h-auto"
+            />
+          </div>
         </div>
 
-        <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="https://a0.muscache.com/pictures/aaa02c2d-9f0d-4c41-878a-68c12ec6c6bd.jpg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+        <div className="swiper-slide p-2 flex items-center">
+          <div className="slide-content">
+            <img
+              src="https://a0.muscache.com/pictures/677a041d-7264-4c45-bb72-52bff21eb6e8.jpg"
+              alt="Slide 2"
+              className="w-1/4 h-auto"
+            />
+          </div>
         </div>
-        
-        <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="https://a0.muscache.com/pictures/aaa02c2d-9f0d-4c41-878a-68c12ec6c6bd.jpg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
+        <div className="swiper-slide p-2 flex items-center">
+          <div className="slide-content">
+            <img
+              src="https://a0.muscache.com/pictures/eb7ba4c0-ea38-4cbb-9db6-bdcc8baad585.jpg"
+              alt="Slide 2"
+              className="w-1/4 h-auto"
+            />
+          </div>
         </div>
+
+        <div className="swiper-slide p-2 flex items-center">
+          <div className="slide-content">
+            <img
+              src="https://a0.muscache.com/pictures/c0fa9598-4e37-40f3-b734-4bd0e2377add.jpg"
+              alt="Slide 2"
+              className="w-1/4 h-auto"
+            />
+          </div>
+        </div>
+
+        <div className="swiper-slide p-2 flex items-center">
+          <div className="slide-content">
+            <img
+              src="https://a0.muscache.com/pictures/3fb523a0-b622-4368-8142-b5e03df7549b.jpg"
+              alt="Slide 2"
+              className="w-1/4 h-auto"
+            />
+          </div>
+        </div>
+
+        <div className="swiper-slide p-2 flex items-center">
+          <div className="slide-content">
+            <img
+              src="https://a0.muscache.com/pictures/3726d94b-534a-42b8-bca0-a0304d912260.jpg"
+              alt="Slide 2"
+              className="w-1/4 h-auto"
+            />
+          </div>
+        </div>
+        <div className="swiper-slide p-2 flex items-center">
+          <div className="slide-content">
+            <img
+              src="https://a0.muscache.com/pictures/bcd1adc0-5cee-4d7a-85ec-f6730b0f8d0c.jpg"
+              alt="Slide 2"
+              className="w-1/4 h-auto"
+            />
+          </div>
+        </div>
+        {/* <div className="swiper-slide p-2 flex items-center">
+          <div className="slide-content">
+            <img
+              src="https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg"
+              alt="Slide 2"
+              className="w-1/4 h-auto"
+            />
+          </div>
+        </div>
+        <div className="swiper-slide p-2 flex items-center">
+          <div className="slide-content">
+            <img
+              src="https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg"
+              alt="Slide 2"
+              className="w-1/4 h-auto"
+            />
+          </div>
+        </div>
+        <div className="swiper-slide p-2 flex items-center">
+          <div className="slide-content">
+            <img
+              src="https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg"
+              alt="Slide 2"
+              className="w-1/4 h-auto"
+            />
+          </div>
+        </div>
+        <div className="swiper-slide p-2 flex items-center">
+          <div className="slide-content">
+            <img
+              src="https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg"
+              alt="Slide 2"
+              className="w-1/4 h-auto"
+            />
+          </div>
+        </div>
+        <div className="swiper-slide p-2 flex items-center">
+          <div className="slide-content">
+            <img
+              src="https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg"
+              alt="Slide 2"
+              className="w-1/4 h-auto"
+            />
+          </div>
+        </div>
+        <div className="swiper-slide p-2 flex items-center">
+          <div className="slide-content">
+            <img
+              src="https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg"
+              alt="Slide 2"
+              className="w-1/4 h-auto"
+            />
+          </div>
+        </div>
+        <div className="swiper-slide p-2 flex items-center">
+          <div className="slide-content">
+            <img
+              src="https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg"
+              alt="Slide 2"
+              className="w-1/4 h-auto"
+            />
+          </div>
+        </div>
+        <div className="swiper-slide p-2 flex items-center">
+          <div className="slide-content">
+            <img
+              src="https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg"
+              alt="Slide 2"
+              className="w-1/4 h-auto"
+            />
+          </div>
+        </div>
+        <div className="swiper-slide p-2 flex items-center">
+          <div className="slide-content">
+            <img
+              src="https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg"
+              alt="Slide 2"
+              className="w-1/4 h-auto"
+            />
+          </div>
+        </div>
+        <div className="swiper-slide p-2 flex items-center">
+          <div className="slide-content">
+            <img
+              src="https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg"
+              alt="Slide 2"
+              className="w-1/4 h-auto"
+            />
+          </div>
+        </div>
+        <div className="swiper-slide p-2 flex items-center">
+          <div className="slide-content">
+            <img
+              src="https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg"
+              alt="Slide 2"
+              className="w-1/4 h-auto"
+            />
+          </div>
+        </div>
+        <div className="swiper-slide p-2 flex items-center">
+          <div className="slide-content">
+            <img
+              src="https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg"
+              alt="Slide 2"
+              className="w-1/4 h-auto"
+            />
+          </div>
+        </div>
+        <div className="swiper-slide p-2 flex items-center">
+          <div className="slide-content">
+            <img
+              src="https://a0.muscache.com/pictures/c5a4f6fc-c92c-4ae8-87dd-57f1ff1b89a6.jpg"
+              alt="Slide 2"
+              className="w-1/4 h-auto"
+            />
+          </div>
+        </div> */}
+        {/* Add more slides as needed */}
+      </div>
+      <div className="swiper-pagination"></div>
+      <div className="swiper-button-next"></div>
+      <div className="swiper-button-prev"></div>
     </div>
-    
-    <button type="button" className="absolute top-0 left-0 z-30 flex items-center justify-center 
-                                     h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-            <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 
-                                    dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 
-                                    group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                  <svg aria-hidden="true" className="w-6 h-6 text-white dark:text-black-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path></svg>
-            <span className="sr-only">Previous</span>
-        </span>
-    </button>
-    <button type="button" className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-        <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60
-                           group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg aria-hidden="true" className="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
-            <span className="sr-only">Next</span>
-        </span>
-    </button>
-</div>
-        </>
-     );
-}
- 
-export default Swiper;
+  );
+};
+
+export default SwiperCarousel;
