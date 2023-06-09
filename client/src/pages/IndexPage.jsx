@@ -26,7 +26,9 @@ const IndexPage = () => {
               <span className="font-semibold">Kshs {place.price} </span>
               per night
             </div>
+            
           </Link>
+          
         ))}
     </div>
   );

@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../providers/UserProvider';
 import SearchBar from './SearchBar';
+import logo from '../assets/logo.png'
 
 export const Header = () => {
   const { user } = useContext(UserContext);
@@ -11,7 +12,7 @@ export const Header = () => {
       <Link to={'/'} className="flex items-center gap-1">
         <img
           className="h-8 w-8 md:h-10 md:w-10"
-          src="https://cdn-icons-png.flaticon.com/512/2111/2111320.png"
+          src={logo}
           alt=""
         />
 

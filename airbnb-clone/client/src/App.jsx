@@ -44,10 +44,12 @@ function App() {
             />
           </Route>
         </Routes>
-        <Footer/>
+        {/* <Footer/> */}
         <ToastContainer autoClose={2000} transition={Slide} />
       </PlaceProvider>
+      {/* <Footer/> */}
     </UserProvider>
+    
   );
 }
 

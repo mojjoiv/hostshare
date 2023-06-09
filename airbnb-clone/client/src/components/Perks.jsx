@@ -139,7 +139,7 @@ const Perks = ({ selected, onChange }) => {
           />
         </svg>
 
-        <span>Private Enterence</span>
+        <span>Private Entrance</span>
       </label>
     </div>
   );
