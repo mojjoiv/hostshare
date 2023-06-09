@@ -41,9 +41,9 @@ const ProfilePage = () => {
     <div>
       <AccountNav />
       {subpage === 'profile' && (
-        <div className="text-center max-w-lg mx-auto ">
+        <div className="text-center max-w-lg my-center mx-auto flex flex-col items-center ">
          
-          <div className="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-900 dark:text-gray-100">
+          <div className="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-900 dark:text-gray-100 px-8">
                       <img src={logo} alt="" className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square" />
                       <div className="space-y-4 text-center divide-y divide-gray-700">
                         <div className="my-2 space-y-1">

@@ -3,12 +3,13 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../providers/UserProvider';
 import SearchBar from './SearchBar';
-// import NavBar from './NavBar';
+import Swiper from './Swiper';
 import logo from '../assets/logo.png'
 
 export const Header = () => {
   const { user } = useContext(UserContext);
   return (
+    <>
     <header className="flex items-center justify-between">
       <Link to={'/'} className="flex items-center gap-1">
         <img
@@ -21,7 +22,6 @@ export const Header = () => {
           HostShare
         </span>
       </Link>
-       {/* <NavBar/> */}
        <b/>
       <SearchBar />
 
@@ -60,5 +60,7 @@ export const Header = () => {
         {user && <div>{user.name}</div>}
       </Link>
     </header>
+      <Swiper/>
+    </>
   );
 };
