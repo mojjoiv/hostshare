@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../providers/UserProvider';
 import SearchBar from './SearchBar';
+// import NavBar from './NavBar';
 import logo from '../assets/logo.png'
 
 export const Header = () => {
@@ -20,7 +21,8 @@ export const Header = () => {
           HostShare
         </span>
       </Link>
-
+       {/* <NavBar/> */}
+       <b/>
       <SearchBar />
 
       <Link

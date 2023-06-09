@@ -16,6 +16,7 @@ import { Slide, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { UserProvider } from './providers/UserProvider';
 import { PlaceProvider } from './providers/PlaceProvider';
+import NavBar from './components/NavBar';
 
 const token = getItemFromLocalStorage('token');
 
@@ -29,6 +30,7 @@ function App() {
       <PlaceProvider>
         <Routes>
           <Route path="/" element={<Layout />}>
+          <Route path="/nav" element={<NavBar />}/>
             <Route index element={<IndexPage />} />
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />

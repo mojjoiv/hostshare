@@ -4,6 +4,7 @@ import { PlaceContext } from '../providers/PlaceProvider';
 import { Link } from 'react-router-dom';
 import Image from '../components/Image';
 import Spinner from '../components/Spinner';
+import './main.css'
 
 const IndexPage = () => {
   const { places, loading } = useContext(PlaceContext);
@@ -17,7 +18,7 @@ const IndexPage = () => {
       {places.length > 0 &&
         places.map((place) => (
           <Link to={`/place/${place._id}`} key={place._id}>
-            <div className="bg-gray-500 mb-2 rounded-2xl flex-1">
+            <div className=" bg-gray-500 mb-2 rounded-2xl flex-1 imgDiv">
               {place.photos?.[0] && <Image src={place.photos?.[0]} />}
             </div>
             <h2 className="font-bold">{place.address}</h2>
@@ -27,6 +28,7 @@ const IndexPage = () => {
               per night
             </div>
           </Link>
+          
         ))}
     </div>
   );
