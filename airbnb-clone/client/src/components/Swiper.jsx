@@ -59,15 +59,16 @@ const SwiperCarousel = () => {
     },
     {
       url: 'https://a0.muscache.com/pictures/ee9e2a40-ffac-4db9-9080-b351efc3cfc4.jpg',
-      name: 'Slide 1',
+      name: 'islands',
     }
   ];
 
-  const swiperContainerRef = useRef(null);
-
-  const onImageError = (e) => {
-    e.target.src = imageUrls
+   const fallbackImageUrl = 'https://a0.muscache.com/pictures/ee9e2a40-ffac-4db9-9080-b351efc3cfc4.jpg';
+   const onImageError = (e) => {
+    e.target.src = fallbackImageUrl
   }
+
+  const swiperContainerRef = useRef(null);
 
   useEffect(() => {
     const swiperOptions = {
@@ -93,18 +94,21 @@ const SwiperCarousel = () => {
 
   return (
     <div
-      ref={swiperContainerRef}
-      className="swiper-container bg-white py-4 px-6 rounded-lg max-w-full mx-auto h-16 flex-wrap mb-4 mt-0"
-    >
+    ref={swiperContainerRef}
+    className="swiper-container bg-white py-4 px-6 rounded-lg max-w-full mx-auto h-16 flex-wrap mb-4 mt-0 relative"
+  >
       <div className="swiper-wrapper flex">
         {imageUrls.map((imageUrl, index) => (
-          <div key={index} className="swiper-slide p-2 flex items-center">
+          <div key={index} className="swiper-slide p-2 flex flex-col items-center">
             <div className="slide-content">
-              <img src={imageUrl} 
-                   alt={`Slide ${index + 1}`} 
-                   onError={onImageError} 
-                   className="w-1/4 h-auto" />
+              <img
+                src={imageUrl.url}
+                alt={`Slide ${index + 1}`}
+                onError={onImageError}
+                className="w-1/4 h-auto"
+              />
             </div>
+            {/* <div className="slide-name text-sm mt-2 flex justify-center absolute">{imageUrl.name}</div> */}
           </div>
         ))}
       </div>

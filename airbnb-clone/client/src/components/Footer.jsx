@@ -1,6 +1,6 @@
 import React from 'react';
 import black from "../assets/black.png"
-import ToolBar from './ToolBar'
+// import ToolBar from './ToolBar'
 
 const Footer = () => {
     return ( 
@@ -27,7 +27,7 @@ const Footer = () => {
       <span className="text-sm text-black sm:text-center dark:text-gray-400">© 2023 <a href="hostshare" className="hover:underline">Hostshare™</a>. All Rights Reserved.
     </span>
     </div>
-    <ToolBar/>
+    {/* <ToolBar/> */}
 
 </footer>
 

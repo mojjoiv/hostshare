@@ -67,13 +67,13 @@ const PlacesFormPage = () => {
       price,
     };
     if (id) {
-      // update existing place
+      
       const { data } = await axios.put('/places/update-place', {
         id,
         ...placeData,
       });
     } else {
-      // new place
+
       const { data } = await axios.post('/places/add-places', placeData);
     }
 
