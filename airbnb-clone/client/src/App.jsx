@@ -46,7 +46,6 @@ function App() {
             />
           </Route>
         </Routes>
-        {/* <Footer/> */}
         <ToastContainer autoClose={2000} transition={Slide} />
       </PlaceProvider>
       <Footer/>

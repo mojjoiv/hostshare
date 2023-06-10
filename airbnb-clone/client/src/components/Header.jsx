@@ -11,7 +11,7 @@ export const Header = () => {
   return (
     <>
     <header className="flex items-center justify-between">
-      <Link to={'/'} className="flex items-center gap-1">
+      {/* <Link to={'/'} className="flex items-center gap-1">
         <img
           className="h-8 w-8 md:h-10 md:w-10"
           src={logo}
@@ -21,11 +21,11 @@ export const Header = () => {
         <span className="hidden md:block font-bold text-2xl text-[#329a9a]">
           HostShare
         </span>
-      </Link>
+      </Link> */}
        <b/>
       <SearchBar />
 
-      <Link
+      {/* <Link
         to={user ? '/account' : '/login'}
         className="flex gap-2 items-center border border-gray-300 rounded-full py-2 px-4"
       >
@@ -58,9 +58,9 @@ export const Header = () => {
           </svg>
         </div>
         {user && <div>{user.name}</div>}
-      </Link>
+      </Link> */}
     </header>
-    <br/>
+    <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
       <Swiper/>
     </>
   );
