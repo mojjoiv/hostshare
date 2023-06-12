@@ -1,6 +1,7 @@
 {
   "name": "client",
   "private": true,
+  "proxy": 'https://airbnb-api-5s7s.onrender.com'
   "version": "0.0.0",
   "type": "module",
   "scripts": {
